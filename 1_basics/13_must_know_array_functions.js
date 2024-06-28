@@ -165,3 +165,9 @@ console.log(numbers.reduce((p, n) => p + n, 0));
 // 즉 아래는 arguments들의 곱셈이 되는 것임
 const all = (...arguments) => Object.values(arguments).reduce((p, n) => p * n, 1);
 console.log(all(1,2,3,4,5,6));
+
+// reduce() 퀴즈
+// reduce() 함수를 사용해서 iveMembers 변수에 있는 모든 스트링 값들의 길이를 더해서 반환하라.
+// 참고로 string의 길이는 .length를 이용해서 구할 수 있다.
+
+console.log(iveMembers.reduce((p, n) => p + n.length, 0));
