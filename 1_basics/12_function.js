@@ -120,3 +120,59 @@ console.log(multiplyAll(3, 4, 5, 6, 7, 8, 9, 10));
 
 console.log(typeof multiply);
 console.log(multiply instanceof Object); //js에서 함수는 Object타입이다.
+
+// 연습
+
+console.log('-----------아래부터 연습------------');
+function test(x, y = 1) {
+    return x / y;
+}
+console.log(test(4, 2));
+
+const test2 = (x, y) => {
+    return x + y;
+}
+console.log(test2(1,4));
+
+const test3 = (x, y, z) => x * y + z;
+console.log(test3(1, 2, 3));
+
+const test4 = x => x * 2;
+console.log(test4(3));
+
+const funcfuncfunc = x => y => z => `x: ${x}, y: ${y}, z: ${z}`;
+console.log(funcfuncfunc(1)(2)(3));
+
+function funcfuncfunc2(x) {
+    return function(y) {
+        return function(z) {
+            return `x: ${x}, y: ${y}, z: ${z}`;
+        }
+    }
+}
+console.log(funcfuncfunc2(3)(2)(1));
+
+const twoMultiply = function(x, y) {
+    return x * y;
+}
+
+console.log(twoMultiply(4,4));
+
+const threeMultiply = function(x, y, z) {
+    console.log(arguments);
+    return x * y * z;
+}
+console.log(threeMultiply(5, 6, 7));
+
+const allMultiply = function(...arguments) {
+    return Object.values(arguments).reduce((a, b) => a * b, 1);
+}
+
+console.log(allMultiply(1,2,3,4,5));
+
+(function(x,y) {
+    console.log(x * y);
+})(2,3);
+
+console.log(typeof threeMultiply);
+console.log(threeMultiply instanceof Object);
